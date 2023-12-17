@@ -1,0 +1,16 @@
+class Hesap():
+    def toplama(self,sayı1,sayı2):
+        return sayı1 + sayı2
+
+    def cıkarma(self,sayı1,sayı2):
+        return sayı1 - sayı2
+
+    def carpma(self,sayı1,sayı2):
+        return sayı1 * sayı2
+
+    def bölme(self,sayı1,sayı2):
+        return sayı1 / sayı2
+
+islem = Hesap()
+sonuc = islem.carpma(20,12)
+print("İşlemin Sonucu: ",sonuc)
