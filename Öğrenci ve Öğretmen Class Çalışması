@@ -1,0 +1,66 @@
+import time
+class Ogrenci():
+    def __init__(self,isim,soyisim,numara,sınıf):
+        print("Öğrenci Listesi Yükleniyor \n-------")
+        self.isim = isim
+        self.soyisim = soyisim
+        self.numara = numara
+        self.sınıf = sınıf
+
+    def Ogrenci_Bilgilerini_Göster(self):
+        ad = input("Lütfen Bİlgileri İsteyen Öğretmenin Adını Gİriniz: ")
+        şifre = input("Lütfen Erişim Şifresini Giriniz: ")
+        if şifre == "12345":
+            print("Bilgiler Sorgulanıyor... \n-------")
+            time.sleep(2)
+            print("Parola Doğru.. \n-------")
+        else:
+            print("Bilgiler Sorgulanıyor... \n-------")
+            time.sleep(2)
+            print("Lütfen Tekrar Deneyiniz... \n-------")
+        print("Öğrenci Bilgileri Yükleniyor... \n-------")
+        print("Öğrencinin Adı: {} \nÖğrencinin Soyadı: {} \nÖğrencinin Numarası: {} \nÖğrencinin Sınıfı: {}".format(self.isim,self.soyisim,self.numara,self.sınıf))
+
+    def Sınıf_Degistir(self,yeni_sınıf):
+        self.sınıf = yeni_sınıf
+
+    def Numara_Degistir(self,yeni_numara):
+        self.numara = yeni_numara
+
+    def İsim_Degistir(self,yeni_ad):
+        self.isim = yeni_ad
+
+    def Soyisim_Değistir(self,yeni_soyisim):
+        self.soyisim = yeni_soyisim
+
+class Ogretmen(Ogrenci):
+    def __init__(self,isim,soyisim,numara,sınıf,departman):
+        super().__init__(isim,soyisim,numara,sınıf)
+        print("Öğretmen Listesi Yükleniyor. \n-------")
+
+        self.departman = departman
+
+
+    def Ogretmen_Bilgilerini_Göster(self):
+        ad = input("Lütfen Bİlgileri İsteyen Öğretmenin Adını Gİriniz: ")
+        şifre = input("Lütfen Erişim Şifresini Giriniz: ")
+        if şifre == "12345":
+            print("Bilgiler Sorgulanıyor... \n-------")
+            time.sleep(2)
+            print("Parola Doğru..")
+        else:
+            print("Bilgiler Sorgulanıyor... \n-------")
+            time.sleep(2)
+            print("Lütfen Tekrar Deneyiniz... \n-------")
+        print("Öğrenci Bilgileri Yükleniyor... \n-------")
+        print("Öğretmenin Adı: {} \nÖğretmenin Soyadı: {} \nÖğretmenin Numarası: {} \nÖğretmenin Sınıfı: {} \nÖğretmenin Departmanı: {}".format(self.isim, self.soyisim, self.numara, self.sınıf,self.departman))
+
+    def Departman_Değistir(self,yeni_departman):
+        self.departman = yeni_departman
+
+
+
+Ogretmen1 = Ogretmen("Mustafa","Bardakçı",234324323,"6,7,8","Matematik")
+Ogretmen1.Ogretmen_Bilgilerini_Göster()
+Ogrenci1 = Ogrenci("Sabri Burak","Uysal",1223124421,8)
+Ogrenci1.Ogrenci_Bilgilerini_Göster()
