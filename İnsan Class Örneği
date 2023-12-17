@@ -1,0 +1,22 @@
+insan_listesi = []
+liste = insan_listesi.sort()
+class Insan():
+    def __init__(self,isim,soyisim,boy,kilo,cinsiyet):
+        self.isim = isim
+        self.soyisim = soyisim
+        self.boy = boy
+        self.kilo = kilo
+        self.cinsiyet = cinsiyet
+
+    def adını_söyle(self):
+        print("Merhaba {}".format(self.isim))
+        print("İnsanın Adı: {} \nİnsanın Soyadı: {} \nİnsanın Boyu: {} \nİnsanın Kilosu: {} \nİnsanın Cinsiyeti: {} \n--------".format(self.isim,self.soyisim,self.boy,self.kilo,self.cinsiyet))
+
+insan1 = Insan("Burak","Uysal",180,92,"Erkek")
+insan1.adını_söyle()
+insan2 = Insan("Öykü","Elverdi",172,56,"Kadın")
+insan2.adını_söyle()
+insan3 = Insan("Mustafa","Bardakçı",168,100,"Erkek")
+insan3.adını_söyle()
+insan4 = Insan("Yağız","Yılmaz",175,100,"Erkek")
+insan4.adını_söyle()
