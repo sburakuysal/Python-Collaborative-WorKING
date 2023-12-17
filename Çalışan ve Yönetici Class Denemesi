@@ -1,0 +1,43 @@
+class Calışan():
+    def __init__(self, isim, maas, departman):
+        print("Çalışan Sınıfının İnit Fonksiyonu")
+        self.isim = isim
+        self.maas = maas
+        self.departman = departman
+
+    def bilgilerigöster(self):
+        print("Çalışan Sınıfının Bilgileri....")
+
+        print("İsim: {} \nMaaş: {} \nDepartman: {}\n".format(self.isim, self.maas, self.departman))
+
+    def Departman_Degistir(self, yeni_departman):
+        self.departman = yeni_departman
+
+class Yönetici(Calışan):
+
+    def __init__(self, isim, maas, departman, kisi_sayısı):
+        print("Yönetici Sınıfının İnit Fonksiyonu")
+        self.isim = isim
+        self.maas = maas
+        self.departman = departman
+        self.kisi_sayısı = kisi_sayısı
+
+
+    def BilgileriGöster(self):
+        print("Yönetici Sınıfının Bilgileri....")
+
+        print("İsim: {} \nMaaş: {} \nDepartman: {} \nSorumlu Kişi Sayısı:{}".format(self.isim, self.maas, self.departman,self.kisi_sayısı))
+
+
+    def zam_yap(self, zam_miktarı):
+        self.maas += zam_miktarı
+
+    def Sorumlu_Kisi_Sayısı_Degistir(self,degisiklik):
+        self.kisi_sayısı += degisiklik
+
+yönetici = Yönetici("Sabri Burak Uysal",17000,"IT",23)
+#yönetici.BilgileriGöster()
+yönetici.zam_yap(3000)
+yönetici.Departman_Degistir("Bİlişim")
+yönetici.Sorumlu_Kisi_Sayısı_Degistir(4)
+yönetici.BilgileriGöster()
