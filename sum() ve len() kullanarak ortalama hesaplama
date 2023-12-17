@@ -1,0 +1,7 @@
+#sum() ve len() kullanarak ortalamayı bulma
+
+liste=[10,20,30,40,50,60]
+
+Toplam = sum(liste)
+Uzunluk = len(liste)
+print("Bu listedeki sayıların toplamı: {}\nBu listedeki sayıların sayısı: {}".format(Toplam,Uzunluk))
