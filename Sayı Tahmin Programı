@@ -1,0 +1,44 @@
+#Python ile Sayı Tahmin Oyunu Yapımı.
+
+from random import randint
+import time
+rand = randint(1,100)
+sayac = 5
+
+while True:
+    sayac -= 1
+    sayı = int(input("Lütfen 1-100 Arası Sayı Tahmin Etmeye Çalışın (0 = Çıkış): "))
+    if sayac == 0:
+        print("Heyecanlı Bekleyiş...")
+        time.sleep(2)
+        print("Tahmin Hakkınız Dolmuştur...")
+        print("Sayı = {}".format(rand))
+        break
+    elif sayı == 0:
+        print("Heyecanlı Bekleyiş...")
+        time.sleep(2)
+        print("Sistemden Çıkış Sağlanıyor...")
+        break
+    elif sayı > rand:
+        print("Heyecanlı Bekleyiş...")
+        time.sleep(2)
+        print("Lütfen Daha Küçük Bir Tahminde Bulunun.")
+        print("Kalan Tahmin Sayınız = {}".format(sayac))
+        continue
+    elif sayı < rand:
+        print("Heyecanlı Bekleyiş...")
+        time.sleep(2)
+        print("Daha Büyük Bir Tahminde Bulunun.")
+        print("Kalan Tahmin Sayınız = {}".format(sayac))
+        continue
+    elif sayac == 0:
+        print("Heyecanlı Bekleyiş...")
+        time.sleep(2)
+        print("Tahmin Hakkınız Dolmuştur...")
+        print("Sayı = {}".format(rand))
+        break
+    else:
+        time.sleep(2)
+        print("Rastgele Girilen Sayı = {}".format(rand))
+        print("Kalan Tahmin Sayınız = {}".format(sayac))
+        break
