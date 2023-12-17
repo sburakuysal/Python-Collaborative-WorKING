@@ -1,0 +1,12 @@
+#Kullanıcıdan alınan kelimeleri alfabetik olarak sıralayan programın Python kodunu yazınız.
+
+def kelimeleri_sirala():
+    metin = input("Lütfen Kelimeleri Aralarında Boşluk Bırakarak Yazın: ")
+    kelimeler = metin.split()
+    kelimeler.sort()
+
+    print("Kelimelerin Alfabetik Sıraya Göre Dizilimleri: ")
+    for i in kelimeler:
+        print(i)
+
+kelimeleri_sirala()
