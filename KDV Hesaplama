@@ -1,0 +1,12 @@
+#KDV Hesaplama ve Toplam Fiyat
+
+def KDV_Hesapla(fiyat):
+    return fiyat * 0.18
+
+def Toplam_Fiyat(fiyat):
+    return fiyat + KDV_Hesapla(fiyat)
+
+fiyat = float(input("Lütfen Ürünün Fİyatını Giriniz: "))
+toplam = fiyat + KDV_Hesapla(fiyat)
+
+print("Seçtiğiniz Ürün İçin Ödemeniz Gereken Tutar: ",Toplam_Fiyat(toplam))
