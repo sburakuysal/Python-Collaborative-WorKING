@@ -1,0 +1,12 @@
+#Girilen sayı uzunluğunda fibonacci dizisini ekrana yazdıran programın Python kodu
+
+def fibonacci(n):
+    if n <= 1:
+        return n
+    else:
+        return fibonacci(n-1)+fibonacci(n-2)
+
+sayı = int(input("Lütfen Fibonacci Serisinin Kaç Basamağını Görmek İstediğinizi Yazın: "))
+
+for i in range(sayı):
+    print(fibonacci(i),end=",")
