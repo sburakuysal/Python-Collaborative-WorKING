@@ -1,0 +1,12 @@
+# Fonksiyon kullanarak genişliği ve yüksekliği girilen dikdörtgenin alanını hesaplayan Python örneği:
+
+def Alan_Hesapla(genislik,yükseklik):
+    alan = genislik * yükseklik
+    print("Dikdörtgenin Alanı: ",alan)
+    return alan
+genislik = int(input("Dikdörtgenin Genişliğini Giriniz: "))
+yükseklik = int(input("Dikdörtgenin Yüksekliğini Giriniz: "))
+
+Alan_Hesapla(genislik,yükseklik)
+
+
