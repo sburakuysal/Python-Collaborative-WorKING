@@ -1,0 +1,40 @@
+#Amaç: Bir tane "Bilgisayar" sınıfı oluşturarak bu sınıfa metodlar ve özellikler ekleyip ve bu class'ı kullanmaya çalışmak.
+
+import time
+import random
+
+
+class Bilgisayar():
+
+    def __init__(self,marka,model,RAM,depolama,yıl,işlemci):
+        self.marka = marka
+        self.model = model
+        self.RAM = RAM
+        self.depolama = depolama
+        self.yıl = yıl
+        self.işlemci = işlemci
+        self.acik_mi = False
+
+    def Bilgileri_Göster(self):
+        print("Bilgisayarın Markası: {}\nBilgisayarın Modeli: {}\nBilgisayarın RAM Kapasitesi: {}\nBilgisayarın Hafızası: {}\nBİlgisayarın Üretim Yılı: {}\nBilgisayarın İşlemcisi: {}".format(self.marka,self.model,self.RAM,self.depolama,self.yıl,self.işlemci))
+
+    def Bilgisayarı_Ac(self):
+        if not self.acik_mi:
+            time.sleep(1)
+            print("Bilgisayarınız Açılıyor...")
+            self.acik_mi = True
+        else:
+            print("Blgisayarınız Zaten Açık...")
+
+    def bilgisayari_kapat(self):
+        if self.acik_mi:
+            time.sleep(1)
+            print("Bilgisayar kapanıyor...")
+            self.acik_mi = False
+        else:
+            print("Bilgisayar zaten kapalı.")
+
+pc1 = Bilgisayar("HP","Skyline",8,128,2013,"i5")
+#pc1.Bilgileri_Göster()
+pc1.Bilgisayarı_Ac()
+pc1.Bilgileri_Göster()
