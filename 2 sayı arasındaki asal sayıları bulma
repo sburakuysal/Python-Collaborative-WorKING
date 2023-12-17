@@ -1,0 +1,14 @@
+#Gönderilen 2 sayı arasındaki tüm asal sayıları bulan python fonksiyon uygulamasını yapınız.
+
+def asal_mı(sayı1,sayı2):
+    for i in range(sayı1, sayı2+1):
+        if i > 1:
+            for j in range(2, i):
+                if (i % j == 0):
+                    break
+            else:
+                print(i)
+sayı1 = int(input("İlk Sayıyı Gİriniz: "))
+sayı2 = int(input("İkinci Sayıyı Giriniz: "))
+
+asal_mı(sayı1,sayı2)
